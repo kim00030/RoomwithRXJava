@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="iMainActivity"
+            type="demo.dankim.com.roomwithrxjava.IMainActivity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/btn_get_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:background="@android:color/holo_red_dark"
+            android:onClick="@{()->iMainActivity.onClickGetData()}"
+            android:text="Get Data"
+            android:textColor="@android:color/white" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_add_data"
+            android:layout_below="@+id/btn_get_data"
+            tools:listitem="@layout/item_layout" />
+
+        <Button
+            android:id="@+id/btn_add_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/holo_green_light"
+            android:onClick="@{()->iMainActivity.onClickAddData()}"
+            android:text="Add Data"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+</layout>
