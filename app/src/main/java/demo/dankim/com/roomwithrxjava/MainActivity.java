@@ -53,8 +53,6 @@ public class MainActivity extends AppCompatActivity implements IMainActivity {
     public void onClickGetData() {
         Log.d(TAG, "onClickGetData: ");
         viewModel.getALlData();
-
-
     }
 
     @Override
